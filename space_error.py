@@ -3,7 +3,7 @@
 """
   Author:  Jim Hardesty
 
-  This is a script that takes a caloutput.db file and error code as the inputs, and
+  This is a script that takes a caloutput.db file and error code as the inputs,  and
   looks for the worst case spacing errors.
 
 """
