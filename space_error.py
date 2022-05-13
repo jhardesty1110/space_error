@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
 """
-  Author:  Jim Hardesty
+  Author:   Jim Hardesty
 
   This is a script that takes a caloutput.db file and error code as the inputs, and
   looks for the worst case spacing errors.
@@ -22,28 +22,28 @@ def usage():
     usage:
 
                       **** For edge to edge spacing rule only ****
-		      
+
 	The error has to be of the form:
-	
+
     GRDS226
-    4904 4904 2 Aug  9 10:56:46 2019      
+    4904 4904 2 Aug  9 10:56:46 2019
     Rule File Pathname: runcal.cal
     PCFILL minimum space to BI >= 1.50 um.
     e 1 2
-    135094 13886 135094 13954 
-    135220 13805 135220 14010 
+    135094 13886 135094 13954
+    135220 13805 135220 14010
     e 2 2
-    135094 33986 135094 34054 
-    135220 33905 135220 34135 
+    135094 33986 135094 34054
+    135220 33905 135220 34135
     e 3 2
-    135094 60386 135094 60454 
+    135094 60386 135094 60454
     135220 60305 135220 60500
-    
-		      
-		      
-		      
-		      
-    
+
+
+
+
+
+
     space_error.py -p "proj dir which contains the .db file" -r "the rule to look for"
 
     ex:    -r GRDS226
@@ -83,7 +83,7 @@ def main(argv):
          print '\nPlease put in the desired spacing rule.'
 	 usage()
          sys.exit()
- 
+
 
 
     #  If the .db file is not called caloutput.db, this code will need to be changed.
@@ -92,17 +92,17 @@ def main(argv):
     #
     #
     # GRDS226
-    # 4904 4904 2 Aug  9 10:56:46 2019      
+    # 4904 4904 2 Aug  9 10:56:46 2019
     # Rule File Pathname: runcal.cal
     # PCFILL minimum space to BI >= 1.50 um.
     # e 1 2
-    # 135094 13886 135094 13954 
-    # 135220 13805 135220 14010 
+    # 135094 13886 135094 13954
+    # 135220 13805 135220 14010
     # e 2 2
-    # 135094 33986 135094 34054 
-    # 135220 33905 135220 34135 
+    # 135094 33986 135094 34054
+    # 135220 33905 135220 34135
     # e 3 2
-    # 135094 60386 135094 60454 
+    # 135094 60386 135094 60454
     # 135220 60305 135220 60500
     #
 
@@ -114,7 +114,7 @@ def main(argv):
     db_file_list_contents = [line.rstrip() for line in db_file_list]       #convert the text file into a list.  Takes out the newline character and trailing whitespace.
 
     violation_list = []
-    
+
     item_iter = iter(db_file_list_contents)    #make db_file_list_contents iterable
 
 
@@ -222,4 +222,3 @@ def main(argv):
 if __name__ == '__main__':
 
     main(sys.argv[1:])
-
